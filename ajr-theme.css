@@ -1,0 +1,219 @@
+body {
+  font-family: Arial;
+  font-size: 1em;
+ }
+
+h1 {
+  font-family: Arial;
+  font-variant: small-caps;
+}
+
+h2 {
+  font-family: Arial;
+  font-variant: small-caps;
+}
+
+h3 {
+  font-family: Arial;
+  font-variant: small-caps;
+  font-size: 1em;
+}
+
+table {
+	border: 5px solid black;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.championship-matrix {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+    font-size: 0.6em;
+}
+
+.primary td {
+  font-family: Arial;
+  font-variant: small-caps;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 5px;
+}
+
+
+.epa td:nth-child(1) {
+	width: 10%;
+}
+
+.epa td {
+  font-family: Arial;
+  font-variant: small-caps;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+
+.epa th {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+
+
+.championship-matrix td:nth-child(1) {
+  font-family: Arial;
+  font-variant: small-caps;
+  font-size: 2.2em;
+  font-weight: bold;
+  padding: 5px;
+  border: none;
+}
+
+.championship-matrix td {
+  font-family: Arial;
+  font-variant: small-caps;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 5px;
+  border: 2px solid gray;
+}
+
+.primary td:nth-child(1) {
+	width: 30%;
+}
+.primary td:nth-child(2) {
+	width: 15%;
+}
+.primary td:nth-child(3) {
+	width: 20%;
+}
+.primary td:nth-child(4) {
+	width: 20%;
+}
+.primary td:nth-child(5) {
+	width: 15%;
+}
+
+
+th {
+  font-family: Arial;
+  font-variant: small-caps;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+.primary th {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.games-now {
+  border: 0px;
+  font-family: Arial;
+  font-variant: small-caps;
+  font-size: 2em;
+}
+
+.games-now td:nth-child(2) {
+	width: 80%;
+}
+
+.empty {
+  background-color: blue;
+  position: relative;
+  float: left;
+}
+
+.team-bar {
+  position: relative;
+  float: left;
+  border: 0.15em solid;
+  font-size: 0.8em;
+  padding: 0.4em;
+  font-weight: bold;
+}
+
+.win-bar {
+  height: 1em;
+  overflow: hidden;
+  clear: both;
+  white-space: nowrap;
+  border-top: 4px solid grey;
+  padding: 15px;
+}
+
+
+
+.team td {
+  font-family: Arial;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.team td:nth-child(2) {
+  font-size: 0.7em;
+}
+
+
+.team td:nth-child(4) {
+  font-size: 1.2em;
+}
+
+.team td:nth-child(5) {
+	font-size: 1em;
+}
+
+.team td:nth-child(6) {
+	font-size: 1.2em;
+}
+
+
+/* BUTTON CSS */
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: Arial;
+  font-variant: small-caps;
+  font-size: 2em;
+  background-size: 12%;
+  background-repeat: no-repeat;
+  background-position: 70% 50%;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 1em;
+  color: blue;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+
