@@ -35,7 +35,6 @@ for (wk in unique(gms_ply_df$Week)) {
   this_wk$RateHomeNew <- this_wk$RateHome + this_wk$EloChng
   this_wk$RateAwayNew <- this_wk$RateAway - this_wk$EloChng
   this_wk$WinnerMargin <- abs(this_wk$HomeScore - this_wk$AwayScore)
-  this_wk$TD_margin <- ifelse(this_wk$HomeWin==1, this_wk$HomeTD - this_wk$AwayTD, this_wk$AwayTD - this_wk$HomeTD)
   rate_new <- data.frame('Tm'=c(this_wk$Away, this_wk$Home), 'NewRate'=c(this_wk$RateAwayNew, this_wk$RateHomeNew), stringsAsFactors = F)
   rate_curr <- merge(rate_curr, rate_new, by = 'Tm', all.x = T)
   rate_curr$Rate <- ifelse(is.na(rate_curr$NewRate), rate_curr$Rate, rate_curr$NewRate)
@@ -62,8 +61,7 @@ sim_res <- sapply(1:sim_cnt, function(sm) {
     rate_curr$NewRate <- NULL
     pred_gm_df <- rbind(pred_gm_df, this_wk)
   }
-  
-  
+
   all_gms <- rbind(ply_gm_df, pred_gm_df)
   
   all_gms$TmWinner <- factor(ifelse(all_gms$HomeWin==1 & all_gms$Week <= reg_szn_gms, all_gms$Home, all_gms$Away), levels = rate_curr$Tm)
